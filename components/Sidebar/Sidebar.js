@@ -1,34 +1,43 @@
 import React, { useState } from "react";
-import { Layout } from "antd";
+import { Layout, Image } from "antd";
 import SiderMenu from "./Menu";
 import { routes } from "../../routes";
 const { Sider } = Layout;
+
+import styles from "../Layout/Layout.module.scss";
 export default function Sidebar() {
-	const [collapsed, setCollapsed] = useState(false);
-	const onCollapse = (collapsed) => {
-		setCollapsed(collapsed);
-	};
-	return (
-		<>
-			<Sider
-				theme="dark"
-				collapsible
-				collapsed={collapsed}
-				onCollapse={onCollapse}
-				breakpoint="lg"
-				theme="dark"
-			>
-				<div
-					className="logo"
-					style={{
-						marginTop: 10,
-						textAlign: "center",
-					}}
-				>
-					<h1 style={{ color: "#fff", fontSize: 24.5 }}>LOGO</h1>
-				</div>
-				<SiderMenu routes={routes} />
-			</Sider>
-		</>
-	);
+  const [collapsed, setCollapsed] = useState(false);
+  const onCollapse = (collapsed) => {
+    setCollapsed(collapsed);
+  };
+  return (
+    <>
+      <Sider
+        collapsed={collapsed}
+        onCollapse={onCollapse}
+        breakpoint="lg"
+        width="282"
+        className="sidebar"
+      >
+        <div
+          className={`${styles.sidebar_header} ${
+            collapsed && styles.collapsed
+          }`}
+        >
+          {!collapsed && (
+            <div className={styles.sidebar_logo}>
+              <Image src="/images/logo.png" preview={false} />
+            </div>
+          )}
+          <div
+            className={styles.sidebar_collapse}
+            onClick={() => setCollapsed(!collapsed)}
+          >
+            <Image src="/images/collapse-icon.png" preview={false} />
+          </div>
+        </div>
+        <SiderMenu routes={routes} />
+      </Sider>
+    </>
+  );
 }

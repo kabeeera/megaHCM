@@ -1,0 +1,72 @@
+/******
+HEADER
+*******/
+.header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: normal;
+  height: 60px;
+  .search_wrapper {
+    position: relative;
+
+    :global .ant-input-outlined {
+      height: 31px;
+      background-color: #e9eaec;
+      padding: 5px 10px 5px 20px;
+      border-radius: 8px;
+      input {
+        padding-left: 30px;
+      }
+    }
+    .search_icon {
+      position: absolute;
+      z-index: 999;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+    }
+  }
+  .header_right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .account_icon,
+    .noti_icon_wrapper,
+    .mail_icon_wrapper {
+      height: 100% !important;
+      position: relative;
+      :global .ant-menu-submenu-title {
+        display: grid;
+        align-items: self-end;
+        height: 100%;
+      }
+    }
+    .noti_icon,
+    .mail_icon {
+      position: relative;
+      .active {
+        width: 10px;
+        height: 10px;
+        background-color: #e03137;
+        border-radius: 50%;
+        position: absolute;
+        border: 2px solid #fff;
+        z-index: 9999;
+      }
+    }
+    .noti_icon {
+      .active {
+        right: 0;
+        top: 0;
+      }
+    }
+    .mail_icon {
+      .active {
+        right: -5px;
+        top: -2px;
+      }
+    }
+  }
+}

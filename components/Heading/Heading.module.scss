@@ -1,0 +1,29 @@
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 15px 20px;
+
+  h2 {
+    font-weight: 700;
+    font-size: var(--font-size-md);
+    color: #21252b;
+    span {
+      font-weight: 400;
+    }
+  }
+
+  :global .filter_icon {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s all;
+    &:hover {
+      background-color: #ffffff;
+    }
+  }
+}

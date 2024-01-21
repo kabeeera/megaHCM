@@ -1,0 +1,22 @@
+/*******
+SIDEBAR
+********/
+.sidebar_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+  background-image: url("/images/border.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 20px;
+  .sidebar_collapse {
+    cursor: pointer;
+  }
+}
+.collapsed {
+  justify-content: center !important;
+  .sidebar_collapse {
+    transform: rotate(180deg);
+  }
+}

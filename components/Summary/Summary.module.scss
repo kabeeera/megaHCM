@@ -1,0 +1,55 @@
+.summary_card {
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h6 {
+    font-size: var(--font-size-xs);
+    font-weight: 400;
+    color: #fff;
+    span {
+      margin-right: 10px;
+    }
+  }
+  h3 {
+    font-size: var(--font-size-xxl);
+    font-weight: 600;
+    color: #fff;
+  }
+  .stats {
+    :global .ant-progress-text {
+      font-size: var(--font-size-xs);
+      font-weight: 500;
+      color: #fff;
+    }
+  }
+}
+.summaryCardGreen {
+  background: linear-gradient(
+    90deg,
+    rgba(41, 171, 145, 1) 0%,
+    rgba(33, 164, 138, 1) 50%
+  );
+}
+.summaryCardOrange {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 166, 0, 1) 0%,
+    rgba(242, 158, 0, 1) 50%
+  );
+}
+.summaryCardRed {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 86, 48, 1) 0%,
+    rgba(240, 66, 27, 1) 50%
+  );
+}
+.summaryCardBlue {
+  background: linear-gradient(
+    90deg,
+    rgba(55, 125, 255, 1) 0%,
+    rgba(44, 111, 236, 1) 50%
+  );
+}
