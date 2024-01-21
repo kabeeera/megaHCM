@@ -14,9 +14,9 @@ function Auth({ children }) {
 				</Menu>
 			</Header> */}
       <Content className="site-layout">{children}</Content>
-      <Footer style={{ textAlign: "center" }}>
+      {/* <Footer style={{ textAlign: "center" }}>
         Ant Design ©2018 Created by Ant UED
-      </Footer>
+      </Footer> */}
     </Layout>
   );
 }
